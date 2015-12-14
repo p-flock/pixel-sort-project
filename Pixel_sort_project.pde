@@ -1,11 +1,14 @@
 PImage source;
 PImage dest;
 
+String IMG_NAME = "austin_badlands.jpg"
+int IMG_HEIGHT = 2048;
+int IMG_WIDTH = 1366;
 int count = 0;
 
 void setup(){
-    size(2048, 1366);
-    source = loadImage("austin_badlands.jpg");
+    size(IMG_HEIGHT, IMG_WIDTH);
+    source = loadImage(IMG_NAME);
     source.loadPixels();
     dest = createImage(source.width, source.height, RGB);
     for (int x = 0; x < source.width; x++) {
